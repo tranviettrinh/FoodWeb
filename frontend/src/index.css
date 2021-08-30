@@ -1,0 +1,287 @@
+html {
+  font-size: 62.5%; /* =10px =1rem */
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh; /* don vi viewpoint height*/
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+
+/* Can chinh giao dien*/
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+
+header {
+  grid-area: header;
+  background-color: #295179;
+}
+
+main {
+  grid-area: main;
+  padding: 1rem;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #295179;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: coral;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-top: 1rem;
+}
+
+.phone-input {
+  max-width: 50%;
+  width: 50%;
+}
+.mail-input {
+  max-width: 50%;
+  width: 50%;
+}
+.name-input {
+  max-width: 50%;
+  width: 50%;
+}
+.address-input {
+  max-width: 100%;
+  width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input,
+select,
+textarea,
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem midnightblue solid;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  background-color: white;
+  cursor: pointer;
+}
+
+input:hover,
+select:hover,
+textarea:hover,
+button:hover {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem coral solid;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button.primary {
+  background-color: goldenrod;
+}
+
+button.secondary {
+  background-color: coral;
+  color: white;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+button.block {
+  width: 100%;
+}
+
+button.block2 {
+  width: 40%;
+  margin-left: 10%;
+}
+
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+h3 {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+/* Can chinh header*/
+
+header a {
+  color: white;
+  padding: 1rem;
+}
+
+a.brand {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.badge {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.3rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row.top {
+  align-items: flex-start;
+}
+
+.row.center {
+  justify-content: center;
+}
+
+.col-1 {
+  flex: 1 1 25rem;
+  /* padding: 2%; */
+}
+.col-2 {
+  flex: 2 1 50rem;
+}
+.min-30 {
+  min-width: 30rem;
+}
+
+/* Can chinh image*/
+img {
+  border-radius: 0.5rem;
+}
+
+img.medium {
+  max-width: 29rem;
+  width: 100%;
+}
+
+img.small {
+  max-width: 5rem;
+  width: 100%;
+}
+
+img.large {
+  width: 80%;
+}
+
+/* Can chinh card*/
+.card {
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+
+.card-rating {
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  padding: 1%;
+  max-width: 78%;
+}
+
+.card-center {
+  display: flex;
+  justify-content: center;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Can chinh rating*/
+.rating span {
+  color: rgb(243, 181, 26);
+  margin: 0.1rem;
+}
+.rating span:last-child {
+  color: darkblue;
+  font-size: 1.5rem;
+}
+
+/* Can chinh alert*/
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+.alert {
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border: 0.5rem;
+}
+
+.alert-info {
+  color: blue;
+  background-color: white;
+}
+.alert-danger {
+  color: red;
+  background-color: white;
+}
