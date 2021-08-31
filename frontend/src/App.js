@@ -15,7 +15,7 @@ function App() {
         <header className="row">
           <div>
             <Link className="brand" to="/">
-              Trang bán đồ ăn thức uống
+              Food Web
             </Link>
           </div>
 
@@ -34,10 +34,12 @@ function App() {
           <Route path="/product/:id" component={ProductScreen} exact></Route>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
-        <footer className="row center"><div>Phát triển bởi TranVietTrinh và MacTungDuong
-          </div><div>Thông tin:
-            </div><div>TranVietTrinh: B17DCAT191: https://github.com/tranviettrinh</div>
-            <div>MacTungDuong: B17DCAT056: https://github.com/macduong</div></footer>
+        <footer className="row center">
+          <div>Phát triển bởi TranVietTrinh và MacTungDuong</div>
+          <div>Thông tin:</div>
+          <div>TranVietTrinh: B17DCAT191: https://github.com/tranviettrinh</div>
+          <div>MacTungDuong: B17DCAT056: https://github.com/macduong</div>
+        </footer>
       </div>
     </BrowserRouter>
   );
