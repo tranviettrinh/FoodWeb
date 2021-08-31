@@ -18,7 +18,7 @@ class ProductRouter extends BaseRouter {
   protected init() {
     this.router.post(
       "/addproduct",
-      uploadOne,
+      uploadOne,authen,author,
       validate(addProduct),
       this._service.addProduct
     );
@@ -28,7 +28,7 @@ class ProductRouter extends BaseRouter {
       this._service.updateProduct
     );
     this.router.post(
-      "/deleteproduct",
+      "/deleteproduct",authen,author,
       validate(deleteProduct),
       this._service.deleteProduct
     );
@@ -40,13 +40,6 @@ class ProductRouter extends BaseRouter {
     this.router.get("/getallproduct", this._service.getAllProducts);
     this.router.get("/getproductbyid/:_id", this._service.getProductById);
   }
-  // protected init(){
-  //     this.router.post('/addproduct',authen,validate(addProduct),this._service.addProduct);
-  //     this.router.post('/updateproduct',authen,validate(updateProduct),this._service.updateProduct);
-  //     this.router.post('/deleteproduct',authen,validate(deleteProduct),this._service.deleteProduct);
-  //     this.router.post('/searchproduct',validate(searchProduct),this._service.searchProduct);
-  //     this.router.get('/getallproduct',this._service.getAllProducts);
-  // }
 }
 
 export = new ProductRouter().router;

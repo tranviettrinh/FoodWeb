@@ -79,7 +79,7 @@ class UserService implements IService{
                     });
                 }
                 else{
-                    res.status(500).json({
+                    res.status(200).json({
                         success: false,
                         result: null,
                         error: 'Wrong password'
@@ -87,14 +87,15 @@ class UserService implements IService{
                 }
             }
             else{
-                res.status(500).json({
+                res.status(200).json({
                     success: false,
                     result: null,
                     error: 'Wrong username'
+            
                 })
             }
         } catch (error) {
-            res.status(500).json({
+            res.status(200).json({
                 success: false,
                 result: null,
                 error: "Can't login this time, please check later" 

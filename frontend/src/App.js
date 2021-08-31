@@ -4,6 +4,8 @@ import { BrowserRouter, Link, Route } from "react-router-dom";
 import CartScreen from "./screens/CartScreen";
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
+import SigninScreen from './screens/SigninScreen';
+import AdminScreen from './screens/AdminScreen';
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -15,7 +17,7 @@ function App() {
         <header className="row">
           <div>
             <Link className="brand" to="/">
-              Food Web
+              🍝 Food Web 🍱
             </Link>
           </div>
 
@@ -26,19 +28,19 @@ function App() {
                 <span className="badge">{cartItems.length}</span>
               )}
             </Link>
-            <Link to="/login">Đăng nhập 🔒</Link>
+            <Link to="/signin">Đăng nhập 🔒</Link>
           </div>
         </header>
         <main>
           <Route path="/cart/:id?" component={CartScreen}></Route>
           <Route path="/product/:id" component={ProductScreen} exact></Route>
           <Route path="/" component={HomeScreen} exact></Route>
+          <Route path="/signin" component={SigninScreen}></Route>
+          <Route path="/admin" component={AdminScreen}></Route>
+
         </main>
         <footer className="row center">
-          <div>Phát triển bởi TranVietTrinh và MacTungDuong</div>
-          <div>Thông tin:</div>
-          <div>TranVietTrinh: B17DCAT191: https://github.com/tranviettrinh</div>
-          <div>MacTungDuong: B17DCAT056: https://github.com/macduong</div>
+          <div>Phát triển bởi  <a href="https://github.com/tranviettrinh">Trần Việt Trinh</a>  và <a href="https://github.com/macduong">Mạc Tùng Dương</a></div>
         </footer>
       </div>
     </BrowserRouter>

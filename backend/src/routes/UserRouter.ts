@@ -12,7 +12,7 @@ class UserRouter extends BaseRouter{
     }
     protected init(){
         this.router.post('/createuser',validate(createUser),this._service.createUser);
-        this.router.post('/login',validate(login),this._service.loginUser);
+        this.router.post('/signin',validate(login),this._service.loginUser);
         this.router.post('/updateuser',validate(updateUser),this._service.updateUser);
     }
 }
